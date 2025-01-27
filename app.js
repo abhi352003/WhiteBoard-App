@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.static("Public"));
 
-const PORT = process.env.PORT || 5000;
-let server = app.listen(PORT,()=>{
+const port = process.env.PORT || 5000;
+let server = app.listen(port,()=>{
     console.log(`listening to port  ${PORT}`)
 })
 
