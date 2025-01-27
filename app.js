@@ -7,7 +7,7 @@ app.use(express.static("Public"));
 
 const port = process.env.PORT || 5000;
 let server = app.listen(port,()=>{
-    console.log(`listening to port  ${PORT}`)
+    console.log(`listening to port  ${port}`)
 })
 
 let io = socket(server);
