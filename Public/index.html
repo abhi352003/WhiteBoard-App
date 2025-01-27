@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenBoard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+<body>
+   
+
+    <div class="container">
+
+        <div class="optional-bar">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="tool-box-cont scale-tool" >
+            <img src="./Icons/Pencil.svg" alt="pencil" class="tool-icon pencil" >
+            <img src="./Icons/Eraser.svg" alt="eraser" class="tool-icon eraser" >
+            <img src="./Icons/Download.svg" alt="Download" class="tool-icon download">
+            <img src="./Icons/Upload.svg" alt="Upload" class="tool-icon upload">
+            <img src="./Icons/StickyNote.svg" alt="stickyNotes" class="tool-icon stickynotes">
+            <img src="./Icons/Undo.svg" alt="Undo" class="tool-icon undo">
+            <img src="./Icons/Redo.svg" alt="Redo" class="tool-icon redu">
+        </div>
+
+        <div class="pencil-tool-cont">
+            <div class="pencil-width-cont">
+                <input type="range" min="2"  max="10" value="3" class="pencil-width">
+            </div>
+            <div class="pencil-color-cont">
+                <div class="black pencil-color"></div>
+                <div class="blue pencil-color"></div>
+                <div class="red pencil-color"></div>
+
+            </div>
+        </div>
+        <div class="eraser-tool-cont">
+            <div class="eraser-width-cont">
+                <input type="range" min="5"  max="15" value="5" class="eraser-width">
+            </div>
+
+        </div>
+
+        <canvas></canvas>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js" integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000")
+    </script>
+    <script src="./script.js"></script>
+    <script src="./canva.js"></script>
+</body>
+</html>
